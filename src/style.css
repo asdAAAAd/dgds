@@ -1,0 +1,71 @@
+:root {
+  --title-color: #fff;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  padding: 50px 10px;
+
+  background-color: #141414;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--title-color);
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.9rem 2rem;
+
+  color: var(--title-color);
+  background-color: #DC2626;
+  border: 1px solid;
+  border-radius: 17%;
+}
+
+#no {
+  position: relative;
+}
+
+.heart {
+  z-index: 999;
+  position: absolute;
+  animation: hearts 4s linear forwards infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  background-color: #fc2a62;
+  position: absolute;
+  height: 30px;
+  width: 45px;
+  border-radius: 15px 0 0 15px;
+}
+
+.heart::before {
+  transform: rotate(45deg);
+}
+
+.heart::after {
+  left: 10.5px;
+  transform: rotate(135deg);
+}
+
+@keyframes hearts {
+  to {
+    opacity: 0;
+  }
+}
